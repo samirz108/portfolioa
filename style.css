@@ -1,0 +1,211 @@
+:root {
+    --purple: #a020f0;
+    --black: #000000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo-icon {
+    color: var(--purple);
+    margin-right: 10px;
+}
+
+nav .nav-btn {
+    background: none;
+    border: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav .nav-btn:hover {
+    transform: scale(1.25); 
+    /* gets bigger when cursor is near */
+}
+
+nav .nav-btn.active {
+    color: var(--purple) !important;
+
+}
+
+.tab-content {
+    display: none;
+    height: calc(100vh - 80px);
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-border {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid var(--purple);
+    padding: 5px;
+    margin-bottom: 20px;
+    zoom: 1.2;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Smooth zoom on hover for the profile image */
+.profile-img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+    transform-origin: center center;
+}
+
+.image-border:hover .profile-img,
+.profile-img:focus {
+    transform: scale(1.18);
+    filter: brightness(1.03);
+    cursor: pointer;
+}
+/* need to learn */
+.typing-container {
+    height: 40px; 
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: var(--black);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover { color: var(--purple); }
+
+/* Projects: The Cave Effect */
+/* #projects {
+    background: black;
+    color: white;
+    cursor: crosshair;
+    --mask-x: 50%;
+    --mask-y: 50%;
+    color: white;
+    background: radial-gradient(
+        circle 180px at var(--mask-x) var(--mask-y), 
+        rgba(255,255,255,0.2) 0%, 
+        black 100%
+    );
+} */
+
+.project-card {
+    border: 1px solid #333;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    background: rgba(181, 240, 18, 0.05);
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 980px;
+    margin: 20px auto 0;
+}
+.project-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.project-card h3 { margin: 8px 0; }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 1800px; 
+    width: 98%;
+    margin: 10px auto 0;
+}
+.skill { text-align: left; }
+.skill-head { display:flex; justify-content:space-between; align-items:center; font-weight:600; margin-bottom:8px; column-gap:40px; }
+.skill-head span:last-child { min-width:64px; text-align:right; font-weight:700; }
+.skill-bar {
+    width: 100%;
+    height: 22px;
+    background: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top:10px; 
+}
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--purple), #7a1bd6);
+    width: 0; 
+    transition: width 1s cubic-bezier(.2,.9,.2,1);
+}
+
+
+#skills.tab-content.active .skill-level {
+    width: var(--val, 50%);
+}
+
+
+.contact-columns { display:flex; gap:30px; align-items:flex-start; justify-content:center; flex-wrap:wrap; max-width:920px; margin:0 auto; }
+.contact-info { min-width:220px; }
+.contact-form { display:flex; flex-direction:column; gap:10px; min-width:260px; width:360px; }
+.contact-form input, .contact-form textarea {
+    padding:10px 12px; border-radius:8px; border:1px solid #ccc; font-family:inherit; resize:vertical;
+}
+.contact-form .btn { align-self:flex-start; }
+
+@media (max-width:600px) {
+    .image-border { width:180px; height:180px; }
+    .contact-form { width:100%; min-width:0; }
+}
+.btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      background: var(--purple);
+      color: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.3s;
+      margin-bottom: 25px;
+    }
+     .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }

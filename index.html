@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samir Shrestha | Portfolio</title>
+    <!-- GOOGLE FONTS for style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="icon" type="png" href="images/favicon1.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <i class="logo" img src="images/logo.svg"></i> 
+            <span class="name">Samir Shrestha</span>
+        </div>
+        <nav id="main-nav">
+            <button class="nav-btn active" onclick="showSection('home', this)">Home</button>
+            <button class="nav-btn" onclick="showSection('skills', this)">My Skills</button>
+            <button class="nav-btn" onclick="showSection('projects', this)">Projects</button>
+            <button class="nav-btn" onclick="showSection('home', this)">Experience</button>
+            <button class="nav-btn" onclick="showSection('contact', this)">Contact</button>
+        </nav>
+    </header>
+
+    <main id="content-area">
+        <section id="home" class="tab-content active">
+            <div class="home-hero">
+                <div class="image-border">
+                    <img src="images/profile.jpeg" alt="Samir" class="profile-img">
+                </div>
+                <h1>Hey, I'm <span class="highlight">Samir</span></h1>
+                <div class="typing-container">
+                    <h2 id="typing-text"></h2>
+                </div>
+                
+                <button class="btn" onclick="showSection('contact')">Contact Me</button>
+                
+                <div class="social-links">
+                    <a href="https://instagram.com/samirz__z" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/samir.shrestha.1084095001" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/samir-shrestha-b8701a362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/9779768727691" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <div class="content-wrapper">
+                <h1>Featured Projects</h1>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/amazon.png" alt="Project One">
+                        <h3>Project One</h3>
+                        <p>Clone of amazon</p>
+                        <a href="https://www.amazon.com/" target="_blank" class="btn">View</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/GG.png" alt="Project Two">
+                        <h3>Project Two</h3>
+                        <p>None.</p>
+                        <a href="#" class="btn">View</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/logo.svg" alt="Project Three">
+                        <h3>Project Three</h3>
+                        <p>None</p>
+                        <a href="#" class="btn">View</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="tab-content">
+            <div class="content-wrapper">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <div class="skill-head"><span>HTML</span><span>80%</span></div>
+                        <div class="skill-bar"><div class="skill-level" style="--val:80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-head"><span>CSS</span><span>40%</span></div>
+                        <div class="skill-bar"><div class="skill-level" style="--val:40%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-head"><span>JavaScript</span><span>Learning</span></div>
+                        <div class="skill-bar"><div class="skill-level" style="--val:10%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-head"><span>Design</span><span>50%</span></div>
+                        <div class="skill-bar"><div class="skill-level" style="--val:50%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="tab-content"><h2>Experience</h2><p>None</p></section>
+
+        <section id="contact" class="tab-content">
+            <div class="content-wrapper contact-wrapper">
+                <h2>Contact</h2>
+                <div class="contact-columns">
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> <a href="mailto:sameershrestha11233@gmail.com">sameershrestha11233@gmail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+9779765420860">+977 9876543210</a></p>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        <button type="submit" class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

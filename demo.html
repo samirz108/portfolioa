@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samir Shrestha | Portfolio</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #6a00ff;
+      --dark: #111;
+      --gray: #666;
+      --light: #f7f7f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: white;
+      color: var(--dark);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 15px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: var(--dark);
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      transform: scale(1.08);
+    }
+
+    nav a.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      min-height: 100vh;
+      padding: 120px 8% 80px;
+    }
+
+    /* ===== HOME ===== */
+    .home {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #ddd;
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .home h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .typing {
+      font-size: 1.3rem;
+      color: var(--primary);
+      height: 30px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.3s;
+      margin-bottom: 25px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .socials a {
+      margin: 0 8px;
+      font-size: 1.3rem;
+      color: var(--dark);
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--primary);
+      transform: scale(1.2);
+    }
+
+    /* ===== COMMON HEADERS ===== */
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .experience {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      color: var(--gray);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      text-align: center;
+      color: var(--gray);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <i class="fa-solid fa-code" img src="images/logo.svg"></i>
+    <span>Samir</span> Shrestha
+  </div>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#skills">MySkills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <div class="profile">
+    <!-- Replace image later -->
+    <img src="https://via.placeholder.com/300" alt="Samir" />
+  </div>
+
+  <h1>Hey I'm Samir</h1>
+  <div class="typing" id="typing"></div>
+
+  <button class="btn">Contact Me</button>
+
+  <div class="socials">
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-box">
+    <div class="skill">Web Development</div>
+    <div class="skill">Graphic Design</div>
+    <div class="skill">Video Editing</div>
+    <div class="skill">UI/UX Design</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="project">Project 1 (Edit later)</div>
+    <div class="project">Project 2 (Edit later)</div>
+    <div class="project">Project 3 (Edit later)</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="section-title">Experience</h2>
+  <p class="experience">Student | Freelance Projects | College Works<br />You can edit this section later.</p>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="contact">Email: yourmail@example.com<br />Phone: +977 XXXXXXXX</p>
+</section>
+
+<script>
+  /* Typing Animation */
+  const texts = ["Web Developer", "Graphic Designer", "Video Editor"];
+  let index = 0;
+  let charIndex = 0;
+  const typingElement = document.getElementById("typing");
+
+  function type() {
+    if (charIndex < texts[index].length) {
+      typingElement.textContent += texts[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 1500);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typingElement.textContent = texts[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 60);
+    } else {
+      index = (index + 1) % texts.length;
+      setTimeout(type, 400);
+    }
+  }
+
+  type();
+
+  /* Active Nav */
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === `#${current}`) {
+        a.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
